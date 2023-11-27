@@ -19,6 +19,6 @@ jobs:
       - run: git config --global user.email "nick.retel@gmail.com"
       - run: git config --global user.name "Nick Retel"
       - run: export NPM_TOKEN="${{ secrets.NPM_TOKEN }}" && bun install
-      - run: export NPM_TOKEN="${{ secrets.NPM_TOKEN }}" && bun build && npm publish --new-version ${{ github.ref_name }}
+      - run: export NPM_TOKEN="${{ secrets.NPM_TOKEN }}" && bun run build && npm publish --new-version ${{ github.ref_name }}
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
