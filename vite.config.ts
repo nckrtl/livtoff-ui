@@ -5,18 +5,18 @@ import vue from '@vitejs/plugin-vue';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
-  build: {
-    lib: {
-      entry: resolve(__dirname, 'index.ts'),
-      name: 'Livtoff UI',
-      fileName: 'acheron-ui-private',
-      formats: ['es'],
+    plugins: [vue()],
+    build: {
+        lib: {
+            entry: resolve(__dirname, 'index.ts'),
+            name: 'Livtoff UI',
+            fileName: 'liveoff-ui',
+            formats: ['es'],
+        },
     },
-  },
-  resolve: {
-    alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url)),
+    resolve: {
+        alias: {
+            '@': fileURLToPath(new URL('./src', import.meta.url)),
+        },
     },
-  },
 });
